@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Biwott Engineering</title>
+    <link rel="stylesheet" href="C:/Users/Kosgei/Documents/BIWOTT/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+	 <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Demo styles -->
+  <style>
+    .mySwiper {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      max-height: 600px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+    <header class="top-header">
+        <div class="container1">
+               <a href="index.html">
+    <img id="logo" src="images/logol.png" alt="Website Logo">
+</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+					<li><a href="projects.html">Upcoming Projects</a></li>
+                    <li><a href="booking.html">Book Appointment</a></li>
+                    <li><a href="about.html">Get in Touch</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="gallery-container">
+    <section id="col1">
+       <h2>Kerugoya Project</h2>
+        <div class="section-content">
+            <p>Our project in Kerugoya is located in a serene and rapidly developing area, offering an ideal blend of rural charm and modern living. This house features contemporary designs, spacious interiors, and energy-efficient solutions, providing a perfect home for families seeking comfort and tranquility. The construction emphasizes high-quality finishes and durability, ensuring long-lasting value.</p>
+        </div>
+    </section>
+</section>
+ <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="images/project/karen/main.jpg" alt="Front Side"><div class="caption">Front Side</div></div>
+	  <div class="swiper-slide"><img src="images/project/karen/living.jpg" alt="Living Room"><div class="caption">Living Room</div></div>
+	  <div class="swiper-slide"><img src="images/project/karen/bedroom.jpg" alt="Bedroom"><div class="caption">Bedroom</div></div>
+	  <div class="swiper-slide"><img src="images/project/karen/washroom.jpg" alt="Washroom"> <div class="caption">Washroom</div></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+       <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+					<li><a href="projects.html">Upcoming Projects</a></li>
+                    <li><a href="booking.html">Book Appointment</a></li>
+                    <li><a href="about.html">Get in Touch</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-links">
+                <a href="facebook.com"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="x.com"><img src="images/twitter.png" alt="X"></a>
+                <a href="instagram.com"><img src="images/instagram.png" alt="Instagram"></a>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3>Working Hours</h3>
+            <p>Monday - Friday : 8:00 AM - 5:00 PM</p>
+            <p>Saturday & Sunday : Closed</p>
+        </div>
+    </div>
+    <p class="footer-text">&copy; 2025 Biwott Engineering & Consultancy Ltd. All Rights Reserved. Website created by Kosgei</p>
+</footer>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+</body>
+</html>

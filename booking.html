@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Biwott Engineering</title>
+    <link rel="stylesheet" href="C:/Users/Kosgei/Documents/BIWOTT/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        // Function to filter counties based on the input
+        function filterCounties() {
+            let input = document.getElementById('county-input').value.toUpperCase();
+            let dropdown = document.getElementById('county-dropdown');
+            let options = dropdown.getElementsByTagName('option');
+            
+            for (let i = 0; i < options.length; i++) {
+                let option = options[i];
+                if (option.text.toUpperCase().indexOf(input) > -1) {
+                    option.style.display = '';
+                } else {
+                    option.style.display = 'none';
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <header class="top-header">
+        <div class="container1">
+                <a href="index.html">
+    <img id="logo" src="images/logol.png" alt="Website Logo">
+</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="projects.html">Upcoming Projects</a></li>
+                    <li><a href="booking.html">Book Appointment</a></li>
+                    <li><a href="about.html">Get in Touch</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section id="booking">
+        <h2 style="text-align: center;">Booking Form</h2>
+        <div class="form-container">
+            <form name="bookingForm" action="https://formspree.io/f/{your_form_id}" method="POST" onsubmit="handleSubmit(event)">
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" required>
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" required>
+                <label for="mail">E-mail:</label>
+                <input type="text" id="mail" name="E-mail" required>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" maxlength="10" required oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                
+                <!-- County Dropdown -->
+                <label for="county">County:</label>
+                <select id="county-dropdown" name="county" required>
+                    <option value="" disabled selected>Select County</option>
+                    <option value="Bomet">Bomet</option>
+                    <option value="Bungoma">Bungoma</option>
+                    <option value="Busia">Busia</option>
+                    <option value="Elgeyo Marakwet">Elgeyo Marakwet</option>
+                    <option value="Embu">Embu</option>
+                    <option value="Garissa">Garissa</option>
+                    <option value="Homa Bay">Homa Bay</option>
+                    <option value="Isiolo">Isiolo</option>
+                    <option value="Kajiado">Kajiado</option>
+                    <option value="Kakamega">Kakamega</option>
+                    <option value="Kericho">Kericho</option>
+                    <option value="Kiambu">Kiambu</option>
+                    <option value="Kilifi">Kilifi</option>
+                    <option value="Kirinyaga">Kirinyaga</option>
+                    <option value="Kisii">Kisii</option>
+                    <option value="Kisumu">Kisumu</option>
+                    <option value="Kitui">Kitui</option>
+                    <option value="Kwale">Kwale</option>
+                    <option value="Laikipia">Laikipia</option>
+                    <option value="Lamu">Lamu</option>
+                    <option value="Machakos">Machakos</option>
+                    <option value="Makueni">Makueni</option>
+                    <option value="Mandera">Mandera</option>
+                    <option value="Meru">Meru</option>
+                    <option value="Migori">Migori</option>
+                    <option value="Mombasa">Mombasa</option>
+                    <option value="Murang'a">Murang'a</option>
+                    <option value="Nairobi">Nairobi</option>
+                    <option value="Nakuru">Nakuru</option>
+                    <option value="Nandi">Nandi</option>
+                    <option value="Narok">Narok</option>
+                    <option value="Nyamira">Nyamira</option>
+                    <option value="Nyandarua">Nyandarua</option>
+                    <option value="Nyanza">Nyanza</option>
+                    <option value="Samburu">Samburu</option>
+                    <option value="Siaya">Siaya</option>
+                    <option value="Taita Taveta">Taita Taveta</option>
+                    <option value="Tana River">Tana River</option>
+                    <option value="Tharaka Nithi">Tharaka Nithi</option>
+                    <option value="Trans Nzoia">Trans Nzoia</option>
+                    <option value="Turkana">Turkana</option>
+                    <option value="Uasin Gishu">Uasin Gishu</option>
+                    <option value="Vihiga">Vihiga</option>
+                    <option value="Wajir">Wajir</option>
+                    <option value="West Pokot">West Pokot</option>
+                </select>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+       <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+					<li><a href="projects.html">Upcoming Projects</a></li>
+                    <li><a href="booking.html">Book Appointment</a></li>
+                    <li><a href="about.html">Get in Touch</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-links">
+                <a href="facebook.com"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="x.com"><img src="images/twitter.png" alt="X"></a>
+                <a href="instagram.com"><img src="images/instagram.png" alt="Instagram"></a>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3>Working Hours</h3>
+            <p>Monday - Friday : 8:00 AM - 5:00 PM</p>
+            <p>Saturday & Sunday : Closed</p>
+        </div>
+    </div>
+
+    <p class="footer-text">&copy; 2025 Biwott Engineering & Consultancy Ltd. All Rights Reserved. Website created by Kosgei</p>
+</footer>
+<script src="scripts/dark.js"></script>
+</body>
+</html>
